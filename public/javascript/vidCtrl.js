@@ -9,7 +9,7 @@ const video = {
   },
   toggle: () => {
     IsplayingCheck_If: if (true){
-      if (video.isplaying == false){
+      if (video.isplaying !== true){
         video.play();
         video.isplaying = true;
         break IsplayingCheck_If;
@@ -20,10 +20,18 @@ const video = {
         break IsplayingCheck_If;
       }
     }
+  },
+  fullscreen:  () => {
+    if (document.fullscreen){
+      document.exitFullscreen();
+    } else {
+      document.documentElement.requestFullscreen();
+    }
   }
 };
 document.getElementById("openvb_play").addEventListener("click", function () {
   video.toggle()
 })
-const isVideoPlaying = video => !!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2);
-console.log(isVideoPlaying(document.getElementById("openvb_video")))
+document.getElementById("openvb_fullscreen").addEventListener("click", function () {
+  video.fullscreen()
+})

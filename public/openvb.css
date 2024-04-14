@@ -18,3 +18,11 @@ body {
   width: 64px;
   height: auto;
 }
+#openvb_fullscreen {
+  position: absolute;
+  right: 1%;
+  bottom: 1.5%;
+  z-index: 100;
+  width: 64px;
+  height: auto;
+}
