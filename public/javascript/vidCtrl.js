@@ -31,7 +31,7 @@ const video = {
 };
 document.getElementById("openvb_play").addEventListener("click", function () {
   video.toggle()
-})
+});
 document.getElementById("openvb_fullscreen").addEventListener("click", function () {
   video.fullscreen()
-})
+});
