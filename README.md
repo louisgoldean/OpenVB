@@ -1,3 +1,4 @@
 # Installation
 Clone the repositiory
-`git clone FIX IT`
+
+`git clone https://github.com/louisgoldean/OpenVB.git`
