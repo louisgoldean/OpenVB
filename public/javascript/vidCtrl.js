@@ -1,7 +1,8 @@
-console.log("OpenVB #1 Loaded")
-
+//                                       Change Video Here l
+//                                                         l
+//                                                         v
 document.getElementById("openvb_video").src = "./openvb/example.mp4";
-
+var slider = document.getElementById("openvb_slider");
 const video = {
   isplaying: false,
   play: () => {
@@ -42,3 +43,10 @@ document.getElementById("openvb_fullscreen").addEventListener("click", function 
 });
 video.toggle()
 video.toggle()
+setInterval(function(){
+  slider.value = document.getElementById("openvb_video").currentTime / 2.11;
+}, 1); 
+slider.oninput = function() {
+  document.getElementById("openvb_video").currentTime = slider.value * 2.11;
+}
+slider.max = document.getElementById("openvb_video").duration;
