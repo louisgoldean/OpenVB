@@ -2,19 +2,21 @@ body {
   margin: 0;
   background: #050505;
   overflow-y: hidden;
+  overflow-x: hidden;
 }
 #openvb_video {
-  position: fixed;
+  position: relative;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 #openvb_play {
   position: absolute;
-  left: 30px;
+  left: 50px;
   bottom: 1%;
-  z-index: 100;
+  z-index: 2;
   width: auto;
   height: 32px;
 }
@@ -22,7 +24,7 @@ body {
   position: absolute;
   left: 70px;
   bottom: 1%;
-  z-index: 100;
+  z-index: 3;
   width: auto;
   height: 32px;
 }
@@ -30,7 +32,47 @@ body {
   position: absolute;
   right: 50px;
   bottom: 1%;
-  z-index: 100;
+  z-index: 4;
   width: auto;
   height: 32px;
+}
+#openvb_slider {
+  margin-left: 90px;
+  margin-right: 90px;
+  transition: all 0.2s;
+  display: block;
+  position: absolute;
+  bottom: calc(1% + 6px);
+  z-index: 5;
+  -webkit-appearance: none;
+  width: calc(100% - 180px);
+  height: 15px;
+  border-radius: 5px;
+  background: #2e2e2e;
+  outline: none;
+  -webkit-transition: .2s;
+}
+
+#openvb_slider:hover {
+  background: #404040;
+}
+
+#openvb_slider::-webkit-slider-thumb {
+  z-index: 6;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #8b54fb;
+  cursor: pointer;
+}
+
+#openvb_slider::-moz-range-thumb {
+  z-index: 7;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8b54fb;
+  cursor: pointer;
 }
